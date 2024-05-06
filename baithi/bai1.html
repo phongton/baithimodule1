@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+<body>
+<script>
+
+    let Number = parseInt(prompt("Nhập số phần tử của mảng:"));
+    let arr = [];
+    for (let i = 0; i < Number; i++) {
+        if(Number > 20){
+            alert("Mời bạn nhập lại và lưu ý số phải bé hơn 20 !!!");
+            break;
+        }else{
+            let num = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + ":"));
+            arr.push(num);
+        }
+    }
+
+    let SumEven = 0;
+    let SumOdd = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            SumEven += arr[i];
+        } else {
+            SumOdd += arr[i];
+        }
+    }
+
+    let result = SumEven - SumOdd;
+    alert("Kết quả: " + result);
+
+</script>
+</body>
+</html>

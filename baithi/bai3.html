@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    let Array = [1,5,6,23,8,47,10,3];
+    function Prime(num) {
+        if (num <= 1) {
+            return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    function SearchPrime(arr) {
+        let PrimeArr = [];
+
+        for (let i = 0; i < arr.length; i++) {
+            if (Prime(arr[i])) {
+                PrimeArr.push(arr[i]);
+            }
+        }
+
+        PrimeArr.sort(function(a, b) {
+            return a - b;
+        });
+
+        return PrimeArr;
+    }
+    let result = SearchPrime(Array);
+    alert(result);
+</script>
+</body>
+</html>
